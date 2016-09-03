@@ -22,6 +22,7 @@
 		030C19061D79E34C000B148B /* Image+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C18FE1D79E34C000B148B /* Image+CoreDataClass.swift */; };
 		030C19071D79E34C000B148B /* Image+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C18FF1D79E34C000B148B /* Image+CoreDataProperties.swift */; };
 		030C19091D79F32D000B148B /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C19081D79F32D000B148B /* MaterialView.swift */; };
+		030C190B1D7B09C5000B148B /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C190A1D7B09C5000B148B /* ItemCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		030C18FE1D79E34C000B148B /* Image+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Image+CoreDataClass.swift"; path = "../Image+CoreDataClass.swift"; sourceTree = "<group>"; };
 		030C18FF1D79E34C000B148B /* Image+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Image+CoreDataProperties.swift"; path = "../Image+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		030C19081D79F32D000B148B /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
+		030C190A1D7B09C5000B148B /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				030C19081D79F32D000B148B /* MaterialView.swift */,
+				030C190A1D7B09C5000B148B /* ItemCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				030C190B1D7B09C5000B148B /* ItemCell.swift in Sources */,
 				030C19021D79E34C000B148B /* ItemType+CoreDataClass.swift in Sources */,
 				030C18E11D79D299000B148B /* DreamListerApp.xcdatamodeld in Sources */,
 				030C18DB1D79D299000B148B /* MainVC.swift in Sources */,

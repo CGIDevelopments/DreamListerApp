@@ -33,7 +33,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hV8-AL-4Dt">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="150" id="Ja8-pb-1TH">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="150" id="Ja8-pb-1TH" customClass="ItemCell" customModule="DreamListerApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="343" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ja8-pb-1TH" id="6aL-fi-ELj">
@@ -86,6 +86,12 @@
                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="materialDesign" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="details" destination="M9a-bn-yg8" id="zke-TB-7TI"/>
+                                            <outlet property="price" destination="tYR-vE-Chs" id="Vjb-vD-C3Z"/>
+                                            <outlet property="thumb" destination="2fL-aA-hpO" id="TCU-ka-0vQ"/>
+                                            <outlet property="title" destination="RrU-JC-Lwd" id="WtD-ti-vR7"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -106,6 +112,10 @@
                             <color key="tintColor" red="0.92549019607843142" green="0.50588235294117645" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="segment" destination="R6q-UU-hGc" id="LY3-Zn-C4V"/>
+                        <outlet property="tableView" destination="hV8-AL-4Dt" id="q39-KU-gFo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -116,7 +126,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6F2-Ir-U3s" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="OsU-mN-qv6">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OsU-mN-qv6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.96872996799487177" green="0.96872996799487177" blue="0.96872996799487177" alpha="0.09989224137931034" colorSpace="calibratedRGB"/>
