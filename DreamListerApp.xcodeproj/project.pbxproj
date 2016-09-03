@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		030C18D91D79D299000B148B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C18D81D79D299000B148B /* AppDelegate.swift */; };
-		030C18DB1D79D299000B148B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C18DA1D79D299000B148B /* ViewController.swift */; };
+		030C18DB1D79D299000B148B /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C18DA1D79D299000B148B /* MainVC.swift */; };
 		030C18DE1D79D299000B148B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 030C18DC1D79D299000B148B /* Main.storyboard */; };
 		030C18E11D79D299000B148B /* DreamListerApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 030C18DF1D79D299000B148B /* DreamListerApp.xcdatamodeld */; };
 		030C18E31D79D299000B148B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 030C18E21D79D299000B148B /* Assets.xcassets */; };
@@ -21,12 +21,13 @@
 		030C19051D79E34C000B148B /* Store+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C18FD1D79E34C000B148B /* Store+CoreDataProperties.swift */; };
 		030C19061D79E34C000B148B /* Image+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C18FE1D79E34C000B148B /* Image+CoreDataClass.swift */; };
 		030C19071D79E34C000B148B /* Image+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C18FF1D79E34C000B148B /* Image+CoreDataProperties.swift */; };
+		030C19091D79F32D000B148B /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C19081D79F32D000B148B /* MaterialView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		030C18D51D79D299000B148B /* DreamListerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DreamListerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		030C18D81D79D299000B148B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		030C18DA1D79D299000B148B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		030C18DA1D79D299000B148B /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		030C18DD1D79D299000B148B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		030C18E01D79D299000B148B /* DreamListerApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DreamListerApp.xcdatamodel; sourceTree = "<group>"; };
 		030C18E21D79D299000B148B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -40,6 +41,7 @@
 		030C18FD1D79E34C000B148B /* Store+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Store+CoreDataProperties.swift"; path = "../Store+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		030C18FE1D79E34C000B148B /* Image+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Image+CoreDataClass.swift"; path = "../Image+CoreDataClass.swift"; sourceTree = "<group>"; };
 		030C18FF1D79E34C000B148B /* Image+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Image+CoreDataProperties.swift"; path = "../Image+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		030C19081D79F32D000B148B /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +98,7 @@
 		030C18EE1D79DA2A000B148B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				030C18DA1D79D299000B148B /* ViewController.swift */,
+				030C18DA1D79D299000B148B /* MainVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -104,6 +106,7 @@
 		030C18EF1D79DA4D000B148B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				030C19081D79F32D000B148B /* MaterialView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -206,7 +209,8 @@
 			files = (
 				030C19021D79E34C000B148B /* ItemType+CoreDataClass.swift in Sources */,
 				030C18E11D79D299000B148B /* DreamListerApp.xcdatamodeld in Sources */,
-				030C18DB1D79D299000B148B /* ViewController.swift in Sources */,
+				030C18DB1D79D299000B148B /* MainVC.swift in Sources */,
+				030C19091D79F32D000B148B /* MaterialView.swift in Sources */,
 				030C19001D79E34C000B148B /* Item+CoreDataClass.swift in Sources */,
 				030C19051D79E34C000B148B /* Store+CoreDataProperties.swift in Sources */,
 				030C18D91D79D299000B148B /* AppDelegate.swift in Sources */,
