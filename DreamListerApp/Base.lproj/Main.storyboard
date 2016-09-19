@@ -19,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imagePick" translatesAutoresizingMaskIntoConstraints="NO" id="dvc-Qz-GtR">
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imagePick" translatesAutoresizingMaskIntoConstraints="NO" id="dvc-Qz-GtR">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="YbC-wN-OJG"/>
                                     <constraint firstAttribute="height" constant="100" id="tJL-gL-fxl"/>
@@ -81,11 +81,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HLw-Er-Lrf">
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HLw-Er-Lrf">
+                                <accessibility key="accessibilityConfiguration">
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="1kV-ql-LKo"/>
                                     <constraint firstAttribute="width" constant="100" id="GVA-oI-8Ig"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="addImage:" destination="feE-p3-x2b" eventType="touchUpInside" id="2ld-Px-Y7F"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -117,12 +123,16 @@
                     <navigationItem key="navigationItem" title="Add/Edit" id="NC3-65-Asm">
                         <barButtonItem key="rightBarButtonItem" systemItem="trash" id="6e8-sZ-IRl">
                             <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="deletePressed:" destination="feE-p3-x2b" id="U2B-fi-4Rg"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="detailsField" destination="Aat-yZ-onC" id="t0F-zH-Ahp"/>
                         <outlet property="priceField" destination="wLS-hK-U3R" id="N7S-Eb-Vbu"/>
                         <outlet property="storePicker" destination="SlT-s2-12U" id="RPC-Pm-8gK"/>
+                        <outlet property="thumgImg" destination="dvc-Qz-GtR" id="of1-MK-74f"/>
                         <outlet property="titleField" destination="T2K-Na-zVx" id="VEG-G4-l6L"/>
                     </connections>
                 </viewController>
@@ -163,7 +173,7 @@
                                             <frame key="frameInset" width="343" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2fL-aA-hpO">
+                                                <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imagePick" translatesAutoresizingMaskIntoConstraints="NO" id="2fL-aA-hpO">
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="133" id="3ww-pN-C5o"/>
                                                     </constraints>
