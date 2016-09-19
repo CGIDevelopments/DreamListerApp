@@ -64,7 +64,7 @@ class CustomTextField: UITextField, UITextFieldDelegate {
     
         if accessibilityIdentifier == "Price" {
             self.keyboardType = UIKeyboardType(rawValue: 8)!
-            self.attributedText = NSAttributedString(string: "£\(self.text!)", attributes: [NSForegroundColorAttributeName: UIColor(netHex: 0xEC81FF)])
+            self.attributedText = NSAttributedString(string: self.text!, attributes: [NSForegroundColorAttributeName: UIColor(netHex: 0xEC81FF)])
             
         } else {
             self.keyboardType = UIKeyboardType(rawValue: 0)!

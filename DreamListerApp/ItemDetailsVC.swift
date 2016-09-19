@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class ItemDetailsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+class ItemDetailsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UINavigationControllerDelegate {
     
     
     @IBOutlet weak var storePicker: UIPickerView!
@@ -18,6 +18,7 @@ class ItemDetailsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDeleg
     @IBOutlet weak var detailsField: CustomTextField!
     
     var stores = [Store]()
+    var itemToEdit: Item?
     
 
     override func viewDidLoad() {
@@ -47,7 +48,14 @@ class ItemDetailsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDeleg
 //        store6.name = "Ebuyer"
 //        
 //        ad.saveContext()
+        
+        
         getStores()
+        
+        
+        if itemToEdit != nil {
+            loadItemData()
+        }
         
     }
     
@@ -95,18 +103,38 @@ class ItemDetailsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDeleg
     
     @IBAction func savePressed(_ sender: UIButton) {
         
-        let item = Item(context: context)
+        var item: Item!
+        let picture = Image(context: context)
+        //picture.image = thumgImg.image
+        
+        if itemToEdit == nil {
+            
+            item = Item(context: context)
+            
+        } else {
+            
+            item = itemToEdit
+            
+        }
+        
+        item.toImage = picture
         
         if let title = titleField.text {
+            
             item.title = title
+            
         }
         
         if let price = priceField.text {
-            item.price = price
+            
+            item.price = (price as NSString).doubleValue
+            
         }
         
         if let details = detailsField.text {
+            
             item.details = details
+            
         }
         
         item.toStore = stores[storePicker.selectedRow(inComponent: 0)]
@@ -117,7 +145,35 @@ class ItemDetailsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDeleg
         
     }
     
-    
+    func loadItemData() {
+        
+        if let item = itemToEdit {
+            
+            titleField.text = item.title
+            priceField.text = "\(item.price)"
+            detailsField.text = item.details
+          //  thumgImg.image = item.toImage?.image as? UIImage
+            
+            
+            if let store = item.toStore {
+                
+                var index = 0
+                repeat {
+                    
+                    let s = stores[index]
+                    if s.name == store.name {
+                        
+                        storePicker.selectRow(index, inComponent: 0, animated: false)
+                        break
+                    }
+                    index += 1
+                    
+                } while (index < stores.count)
+            }
+        }
+        
+    }
+
     
     
 
